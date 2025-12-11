@@ -1,19 +1,15 @@
 import re
 
-
 def check_identical_strings(str1: str, str2: str) -> bool:
     return str1 == str2
-
 
 def is_valid_email(email_string: str) -> bool:
     pattern = r"^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
     return re.match(pattern, email_string.strip()) is not None
 
-
 def check_minimum_length(input_string: str, min_length: int = 8) -> bool:
     return len(input_string) >= min_length
-
-
+    
 def is_complex_password(password_string: str) -> bool:
     if len(password_string) < 8:
         return False
